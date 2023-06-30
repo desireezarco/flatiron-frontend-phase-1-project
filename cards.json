@@ -1,0 +1,38 @@
+[
+    {
+        "image": "../images/Chaeyoung.png",
+        "name": "Chaeyoung"
+    },
+    {
+        "image": "../images/Dahyun.png",
+        "name": "Dahyun"
+    },
+    {
+        "image": "../images/Jeongyeon.png",
+        "name": "Jeongyeon"
+    },
+    {
+        "image": "../images/Jihyo.png",
+        "name": "Jihyo"
+    },
+    {
+        "image": "../images/mina.png",
+        "name": "Mina"
+    },
+    {
+        "image": "../images/momo.png",
+        "name": "Momo"
+    },
+    {
+        "image": "../images/Nayeon.png",
+        "name": "Nayeon"
+    },
+    {
+        "image": "../images/Sana.png",
+        "name": "Sana"
+    },
+    {
+        "image": "../images/Tzuyu.png",
+        "name": "Tzuyu"
+    }
+]
