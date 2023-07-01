@@ -1,4 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
+    height: 100vh;
+    background: blue;
+}
+
+img {
+    width: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------ */
+/* body {
     min-height: 100vw;
     min-width: 100vw;
     background-color: black;
@@ -80,4 +105,4 @@ p {
     background-position: center center;
     background-size: cover;
     backface-visibility: hidden;
-}
+} */
