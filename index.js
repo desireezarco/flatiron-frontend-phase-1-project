@@ -1,3 +1,24 @@
+const cards = document.querySelectorAll('.memory-card');
+
+function flipCard(){
+    this.classList.toggle('flip');
+}
+
+cards.forEach(card => card.addEventListener("click", flipCard));
+
+
+
+
+
+
+
+
+
+
+
+
+
+// -----
 // const gridContainer = document.querySelector(".grid-container");
 // let cards = [];
 // let firstCard, secondCard;
