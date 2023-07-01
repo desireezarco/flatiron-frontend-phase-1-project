@@ -10,14 +10,31 @@ function flipCard(){
         //first click
         flippedCard = true;
         firstCard = this;
-    } else {
+    
+        return;
+    }
         //second click
         flippedCard = false;
         secondCard = this;
+        
+        checkForMatch();
+    }
 
-        //do cards match?
-        console.log(firstCard.dataset.member);
-        console.log(secondCard.dataset.member);
+function checkForMatch(){
+    let isMatch = firstCard.dataset.member === secondCard.dataset.member;
+    
+    isMatch ? disableCards() : unflipCards();
+
+function disableCards(){
+        firstCard.removeEventListener("click", flipCard);
+        secondCard.removeEventListener("click", flipCard);
+}
+
+function unflipCards(){
+        setTimeout(() => {
+            firstCard.classList.remove("flip");
+            secondCard.classList.remove("flip");
+        }, 1500);
     }
 }
 
