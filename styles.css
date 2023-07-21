@@ -23,6 +23,14 @@ p {
     box-sizing: border-box;
 }
 
+/* .grid-container{
+    grid-column: 1 / -1;
+    display: grid;
+    justify-content: center;
+    grid-gap: 16px;
+    grid-template-columns: repeat(6, auto);
+} */
+
 .actions button {
     padding: 8px 16px;
     font-size: 30px;
@@ -36,18 +44,12 @@ p {
     height: 640px;
     margin: auto;
     display: flex;
+    grid-template-columns: repeat(5, auto);
     flex-wrap: wrap;
     perspective: 1000px;
 }
 
 
-/* .grid-container{
-    display: grid;
-    justify-content: center;
-    grid-gap: 16px;
-    grid-template-columns: repeat(6, 140px);
-    grid-template-rows: repeat(2, calc(140px / 2 * 3))
- } */
 
 .memory-card {
     width: calc(25% - 10px);

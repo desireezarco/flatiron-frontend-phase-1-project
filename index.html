@@ -9,6 +9,11 @@
 </head>
 <body>
     <br><h1>Twice Memory Game</h1></br>
+    <div class="grid-container"></div>
+        <p>Time <span class="time"></span></p>
+            <div class="actions">
+        <button onclick="restart()">Restart</button>
+    </div>
     <section class="memory-game">
         <div class="memory-card" data-member="Dahyun">
             <img class="front-face" src="images/Dahyun.png"
@@ -111,11 +116,6 @@
             <img class="back-face" src="images/twice-logo.png" alt="Twice Logo"/>
         </div>
         
-    <!-- <div class="grid-container"></div> -->
-    <p>Score: <span class="score"></span></p>
-    <div class="actions">
-        <button onclick="restart()">Restart</button>
-    </div>
-    <script src="index.js"></script>
+    <script src="./index.js"></script>
 </body>
 </html>

@@ -1,0 +1,53 @@
+{
+    "members": [
+        {
+            "id": 1,
+            "name": "Chaeyoung",
+            "image": "./images/Chaeyoung.png"
+        },
+        {
+            "id": 2,
+            "name": "Dahyun",
+            "image": "./images/Dahyun.png"
+        },
+        {
+            "id": 3,
+            "name": "Jeongyeon",
+            "image": "./images/Jeongyeon.png"
+        },
+        {
+            "id": 4,
+            "name": "Jihyo",
+            "image": "./images/Jihyo.png"
+        },
+        {
+            "id": 5,
+            "name": "Mina",
+            "image": "./images/mina.png"
+        },
+        {
+            "id": 6,
+            "name": "Momo",
+            "image": "./images/momo.png"
+        },
+        {
+            "id": 7,
+            "name": "Nayeon",
+            "image": "./images/Nayeon.png"
+        },
+        {
+            "id": 8,
+            "name": "Sana",
+            "image": "./images/Sana.png"
+        },
+        {
+            "id": 9,
+            "name": "Tzuyu",
+            "image": "./images/Tzuyu.png"
+        },
+        {
+            "id": 10,
+            "name": "Group",
+            "image": "./images/group.png"
+        }
+]}
