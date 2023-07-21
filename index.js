@@ -4,6 +4,15 @@ let flippedCard = false;
 let lockBoard= false;
 let firstCard, secondCard;
 
+fetch ("http://localhost:3000/members")
+    .then((resp) => resp.json())
+    .then((data) => renderCards(data))
+
+function renderCards(members){
+    console.log(members)
+}
+
+
 function flipCard(){
     if (lockBoard) return;
     if (this === firstCard) return;

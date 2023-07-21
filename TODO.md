@@ -7,7 +7,7 @@ Project Requirements:
 [x] Must be a Single Page Application (SPA)
         -- No redirects or reloads --
 [ ] 3 different event listeners that enable interactivity
-        --click event, mousedown & mouseup event, 
+        --click event, mouse enter, 
     [ ] Each event listeners should have own unique callback 
         function. (.addEventListener())
     [ ] Events must be in index.js
