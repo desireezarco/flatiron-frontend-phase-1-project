@@ -9,7 +9,10 @@ fetch ("http://localhost:3000/members")
     .then((data) => renderCards(data))
 
 function renderCards(members){
-    console.log(members)
+    // have each card appear
+    // create 20 divs, two each for matching
+    members.forEach(member => {
+        console.log(member)})
 }
 
 
