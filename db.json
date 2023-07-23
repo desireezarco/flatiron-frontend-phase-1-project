@@ -7,46 +7,96 @@
         },
         {
             "id": 2,
+            "name": "Chaeyoung",
+            "image": "./images/Chaeyoung.png"
+        },
+        {
+            "id": 3,
             "name": "Dahyun",
             "image": "./images/Dahyun.png"
         },
         {
-            "id": 3,
+            "id": 4,
+            "name": "Dahyun",
+            "image": "./images/Dahyun.png"
+        },
+        {
+            "id": 5,
             "name": "Jeongyeon",
             "image": "./images/Jeongyeon.png"
         },
         {
-            "id": 4,
+            "id": 6,
+            "name": "Jeongyeon",
+            "image": "./images/Jeongyeon.png"
+        },
+        {
+            "id": 7,
             "name": "Jihyo",
             "image": "./images/Jihyo.png"
         },
         {
-            "id": 5,
+            "id": 8,
+            "name": "Jihyo",
+            "image": "./images/Jihyo.png"
+        },
+        {
+            "id": 9,
             "name": "Mina",
             "image": "./images/mina.png"
         },
         {
-            "id": 6,
+            "id": 10,
+            "name": "Mina",
+            "image": "./images/mina.png"
+        },
+        {
+            "id": 11,
             "name": "Momo",
             "image": "./images/momo.png"
         },
         {
-            "id": 7,
+            "id": 12,
+            "name": "Momo",
+            "image": "./images/momo.png"
+        },
+        {
+            "id": 13,
             "name": "Nayeon",
             "image": "./images/Nayeon.png"
         },
         {
-            "id": 8,
+            "id": 14,
+            "name": "Nayeon",
+            "image": "./images/Nayeon.png"
+        },
+        {
+            "id": 15,
             "name": "Sana",
             "image": "./images/Sana.png"
         },
         {
-            "id": 9,
+            "id": 16,
+            "name": "Sana",
+            "image": "./images/Sana.png"
+        },
+        {
+            "id": 17,
             "name": "Tzuyu",
             "image": "./images/Tzuyu.png"
         },
         {
-            "id": 10,
+            "id": 18,
+            "name": "Tzuyu",
+            "image": "./images/Tzuyu.png"
+        },
+        {
+            "id": 19,
+            "name": "Group",
+            "image": "./images/group.png"
+        },
+        {
+            "id": 20,
             "name": "Group",
             "image": "./images/group.png"
         }
