@@ -23,11 +23,16 @@ p {
     box-sizing: border-box;
 }
 
+img {
+    width: 100px;
+}
+
 .grid-container{
     display: grid;
     justify-content: center;
     grid-gap: 16px;
-    grid-template-columns: repeat(5, auto);
+    grid-template-columns: repeat(5, 4);
+    grid-column: 1 / -1;
 }
 
 .actions button {
@@ -37,14 +42,14 @@ p {
     background-color: rgb(140, 194, 140);
     color: white;
 }
-
+ 
 .memory-game {
-    grid-column: 1 / -1;
     width: 640px;
     height: 640px;
+    justify-content: center;
     margin: auto;
     display: flex;
-    grid-template-columns: repeat(5, auto);
+    grid-template-columns: repeat(5, 4);
     flex-wrap: wrap;
     perspective: 1000px;
 }
@@ -52,8 +57,8 @@ p {
 
 
 .memory-card {
-    width: calc(25% - 10px);
-    height: calc(33.333% - 10px);
+    width: 125px;
+    height: 175px;
     margin: 5px;
     position: relative;
     transform: scale(1);

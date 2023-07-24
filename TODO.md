@@ -1,9 +1,9 @@
 Project Requirements:
-[x] HTML/CSS/JS that accesses data from public API or your own 
+[ ] HTML/CSS/JS that accesses data from public API or your own 
         API using json-server and db.json file
-    [x] API should return collection of at least 5 objects 
+    [ ] API should return collection of at least 5 objects 
         with each object having at least 3 attributes
-    [x] Handled asynchronously & use JSON
+    [ ] Handled asynchronously & use JSON
 [x] Must be a Single Page Application (SPA)
         -- No redirects or reloads --
 [ ] 2 different event listeners that enable interactivity
@@ -11,6 +11,25 @@ Project Requirements:
     [ ] Each event listeners should have own unique callback 
         function. (.addEventListener())
     [ ] Events must be in index.js
-[ ] Use array method: map, forEach, filter, etc.
+[x] Use array method: map, forEach, filter, etc.
 
+-------------------------------------------------------------------------------
+
+Revision plan:
+
+Use FETCH for JSON DATA
+[ ] HTML/CSS/JS that accesses data from public API or your own 
+        API using json-server and db.json file
+    [ ] API should return collection of at least 5 objects 
+        with each object having at least 3 attributes
+    [ ] Handled asynchronously & use JSON
+[ ] Add one more eventListener
+
+[ ] Make grid 5 x 4 
 [ ] Include a countdown timer
+[ ] 30 Commits!!! *SAVE* *SAVE* *SAVE* 
+
+-------------------------------------------------------------------------------
+
+Extra:
+[ ] Include click audio

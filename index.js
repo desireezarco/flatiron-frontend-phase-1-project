@@ -1,4 +1,7 @@
-//UNFINISHED REVISION OF PROJECT
+/*  UNFINISHED REVISION OF PROJECT!!! */
+
+//Instead of hardcoding each card, I've created a json file with each member and its 3 attributes.
+//After meeting with Matt, he helped me refresh my memory on how fetch works
 
 //grab json data using fetch
 
@@ -40,7 +43,7 @@
 // console.log(cards)
 // const cards = document.querySelector('card-container')
 // const cards = document.getElementById('members')
-// const cards = document.querySelectorAll('.memory-card');
+const cards = document.querySelectorAll('.memory-card');
 
 
 
@@ -112,3 +115,5 @@ function resetBoard(){
 
 //event listeners
 cards.forEach(card => card.addEventListener("click", flipCard));
+//[ ] NEED ONE MORE EVENT LISTENER
+
