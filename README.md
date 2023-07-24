@@ -12,7 +12,7 @@ It is a very fun and interactive game for user and BIG Twice fans to enjoy!
 
 ## Screenshot
 
-![home screen](images/homescreen.png)
+![home screen](./images/homescreen.png)
 
 ## GIF
 
