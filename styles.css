@@ -23,13 +23,12 @@ p {
     box-sizing: border-box;
 }
 
-/* .grid-container{
-    grid-column: 1 / -1;
+.grid-container{
     display: grid;
     justify-content: center;
     grid-gap: 16px;
-    grid-template-columns: repeat(6, auto);
-} */
+    grid-template-columns: repeat(5, auto);
+}
 
 .actions button {
     padding: 8px 16px;
@@ -40,11 +39,11 @@ p {
 }
 
 .memory-game {
+    grid-column: 1 / -1;
     width: 640px;
     height: 640px;
     margin: auto;
-    /* display: -ms-inline-grid; */
-    display: flex
+    display: flex;
     grid-template-columns: repeat(5, auto);
     flex-wrap: wrap;
     perspective: 1000px;
