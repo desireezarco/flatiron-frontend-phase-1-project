@@ -1,21 +1,38 @@
+//UNFINISHED REVISION OF PROJECT
+
 //grab json data using fetch
 
-fetch ("http://localhost:3000/members")
+/* fetch ("http://localhost:3000/members")
     .then((resp) => resp.json())
-    .then((data) => renderCards(data))
-    // fat arrow functions ("callback function")
-    // fetching data from server, converting it into usable data
+    .then((data) => renderCards(data)) */
+
+    //fat arrow functions ("callback function")
+    //fetching data from server, converting it into usable data
 
 
     // have each card appear
+  /*   function renderCards(members){
+        console.log(members) */
+        
     // create 20 divs, two each for matching pair
-function renderCards(members){
-    members.forEach(member => {
-        const members = document.createElement("div")
-        members.classList.add("card")
-        console.log(members)
+    //create grid
+/*     members.forEach((member) => {
+        const card = document.createElement("div")
+        card.classList.add("card");
+        
+        const h2 = document.createElement("h2")
+        h2.textContent = members.name
+
+        const img = document.createElement("img");
+        img.classList.add("member-image");
+        img.src = member.image;
+
+        card.append(members)
+
+        document.querySelector("#card-container")
+
 })
-}
+} */
 
 ///practice code
 
@@ -27,71 +44,71 @@ function renderCards(members){
 
 
 
-// ///
-// let flippedCard = false;
-// let lockBoard= false;
-// let firstCard, secondCard;
+///
+let flippedCard = false;
+let lockBoard= false;
+let firstCard, secondCard;
 
 
-// //flip card action
-// function flipCard(){
-//     if (lockBoard) return;
-//     if (this === firstCard) return;
+//flip card action
+function flipCard(){
+    if (lockBoard) return;
+    if (this === firstCard) return;
 
-//     this.classList.add('flip');
+    this.classList.add('flip');
 
-//     if (!flippedCard){
-//         //first click
-//         flippedCard = true;
-//         firstCard = this;
+    if (!flippedCard){
+        //first click
+        flippedCard = true;
+        firstCard = this;
     
-//         return;
-//     }
-//         //second click
-//         secondCard = this;
+        return;
+    }
+        //second click
+        secondCard = this;
         
-//         checkForMatch();
-//     }
-// //check for match
-// function checkForMatch(){
-//     let isMatch = firstCard.dataset.member === secondCard.dataset.member;
+        checkForMatch();
+    }
+//check for match
+function checkForMatch(){
+    let isMatch = firstCard.dataset.member === secondCard.dataset.member;
     
-//     isMatch ? disableCards() : unflipCards();
+    isMatch ? disableCards() : unflipCards();
 
-// //if does not match
-// function disableCards(){
-//         firstCard.removeEventListener("click", flipCard);
-//         secondCard.removeEventListener("click", flipCard);
+//if does not match
+function disableCards(){
+        firstCard.removeEventListener("click", flipCard);
+        secondCard.removeEventListener("click", flipCard);
 
-//     resetBoard();
-// }
+    resetBoard();
+}
 
 
-// function unflipCards(){
-//     lockBoard = true;
-//         setTimeout(() => {
-//             firstCard.classList.remove("flip");
-//             secondCard.classList.remove("flip");
+function unflipCards(){
+    lockBoard = true;
+        setTimeout(() => {
+            firstCard.classList.remove("flip");
+            secondCard.classList.remove("flip");
             
-//         resetBoard();
-//         }, 1500);
-//     }
-// }
+        resetBoard();
+        }, 1500);
+    }
+}
 
-// function resetBoard(){
-//     flippedCard = false;
-//     lockBoard = false;
-//     firstCard = null;
-//     secondCard = null;
-// }
+function resetBoard(){
+    flippedCard = false;
+    lockBoard = false;
+    firstCard = null;
+    secondCard = null;
+}
 
-// // //shuffle cards to different positions
-// // (function shuffle(){
-// //     cards.forEach(card => {
-// //         let randomPosition = Math.floor(Math.random() *  12);
-// //         card.style.order = randomPosition;
-// //     });
-// // })();
+//shuffle cards to different positions
+(function shuffle(){
+    cards.forEach(card => {
+        let randomPosition = Math.floor(Math.random() *  12);
+        card.style.order = randomPosition;
+    });
+})();
 
-// // //event listeners
-// // cards.forEach(card => card.addEventListener("click", flipCard));
+//event listeners
+cards.forEach(card => card.addEventListener("click", flipCard));
