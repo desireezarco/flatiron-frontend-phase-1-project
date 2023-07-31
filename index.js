@@ -3,40 +3,65 @@
 //Instead of hardcoding each card, I've created a json file with each member and its 3 attributes.
 //After meeting with Matt, he helped me refresh my memory on how fetch works
 
-//grab json data using fetch
+// const section = document.querySelector("section");
+// //grab json data using fetch
 
-/* fetch ("http://localhost:3000/members")
-    .then((resp) => resp.json())
-    .then((data) => renderCards(data)) */
+// fetch ("http://localhost:3000/members")
+//     .then((resp) => resp.json())
+//     .then((data) => renderCards(data))
+//     .catch(error => console.log("ERROR"))
+//     .catch(error => {
+//         console.log(error);
+//     })
 
-    //fat arrow functions ("callback function")
-    //fetching data from server, converting it into usable data
+
+//async json fetch
+fetch("http://localhost:3000/members")
+    .then((response) => {
+        console.log('SUCCESS', response);
+        return response.json();
+    })
+    .then(data => {
+        console.log(data);
+    })
+    .catch((error) => {
+        console.log('UNSUCCESSFUL', error);
+    });
+
+//     //fat arrow functions ("callback function")
+//     //fetching data from server, converting it into usable data
 
 
-    // have each card appear
-  /*   function renderCards(members){
-        console.log(members) */
-        
+//     // have each card appear
+  function renderCards(members){
+console.log(members);
+  }
     // create 20 divs, two each for matching pair
     //create grid
-/*     members.forEach((member) => {
-        const card = document.createElement("div")
-        card.classList.add("card");
-        
-        const h2 = document.createElement("h2")
-        h2.textContent = members.name
+//   members.forEach((member) => {
+//     // console.log(member);
+//   })
+        const card = document.createElement("div");
+        const front = document.createElement("img");
+        const back = document.createElement("div");
 
-        const img = document.createElement("img");
-        img.classList.add("member-image");
-        img.src = member.image;
 
-        card.append(members)
+//   })
+//         card.classList = "card";
+//         // const front = document.createElement("h2")
+//         // h2.textContent = members.name
+//         front.classList = document.createElement("img");
+//         // img.classList.add("member-image");
+//         // img.src = member.image;
+//         back.classList = "back";
 
-        document.querySelector("#card-container")
 
-})
-} */
+        // card.append(members)
 
+        // document.querySelector("#card-container")
+
+// })
+// }
 ///practice code
 
 // const cards = document.getElementById("")
@@ -72,13 +97,14 @@ function flipCard(){
         
         checkForMatch();
     }
-//check for match
+
+//Check for match
 function checkForMatch(){
     let isMatch = firstCard.dataset.member === secondCard.dataset.member;
     
     isMatch ? disableCards() : unflipCards();
 
-//if does not match
+//If does not match
 function disableCards(){
         firstCard.removeEventListener("click", flipCard);
         secondCard.removeEventListener("click", flipCard);
@@ -86,7 +112,7 @@ function disableCards(){
     resetBoard();
 }
 
-
+//Time it takes to flip card back over
 function unflipCards(){
     lockBoard = true;
         setTimeout(() => {
@@ -105,15 +131,17 @@ function resetBoard(){
     secondCard = null;
 }
 
-//shuffle cards to different positions
-(function shuffle(){
+//Shuffle cards to different positions
+function shuffle(){
     cards.forEach(card => {
-        let randomPosition = Math.floor(Math.random() *  12);
-        card.style.order = randomPosition;
+        let randomPosition = Math.random() *  12;
+        card.style.order = randomPosition ;
+      
     });
-})();
+}
+shuffle();
 
-//event listeners
-cards.forEach(card => card.addEventListener("click", flipCard));
+//Event listeners
+// cards.forEach(card => card.addEventListener("click", flipCard));
 //[ ] NEED ONE MORE EVENT LISTENER
-
+//[ ] EXTRA EVENT LISTENER

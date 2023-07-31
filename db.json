@@ -3,101 +3,139 @@
         {
             "id": 1,
             "name": "Chaeyoung",
+            "age": "24",
+            "nationality": "Korean",
             "image": "./images/Chaeyoung.png"
         },
         {
             "id": 2,
             "name": "Chaeyoung",
+            "age": "24",
+            "nationality": "Korean",
             "image": "./images/Chaeyoung.png"
         },
         {
             "id": 3,
             "name": "Dahyun",
+            "age": "25",
+            "nationality": "Korean",
             "image": "./images/Dahyun.png"
         },
         {
             "id": 4,
             "name": "Dahyun",
+            "age": "25",
+            "nationality": "Korean",
             "image": "./images/Dahyun.png"
         },
         {
             "id": 5,
             "name": "Jeongyeon",
+            "age": "26",
+            "nationality": "Korean",
             "image": "./images/Jeongyeon.png"
         },
         {
             "id": 6,
             "name": "Jeongyeon",
+            "age": "26",
+            "nationality": "Korean",
             "image": "./images/Jeongyeon.png"
         },
         {
             "id": 7,
             "name": "Jihyo",
+            "age": "26",
+            "nationality": "Korean",
             "image": "./images/Jihyo.png"
         },
         {
             "id": 8,
             "name": "Jihyo",
+            "age": "26",
+            "nationality": "Korean",
             "image": "./images/Jihyo.png"
         },
         {
             "id": 9,
             "name": "Mina",
+            "age": "26",
+            "nationality": "Japanese",
             "image": "./images/mina.png"
         },
         {
             "id": 10,
             "name": "Mina",
+            "age": "26",
+            "nationality": "Japanese",
             "image": "./images/mina.png"
         },
         {
             "id": 11,
             "name": "Momo",
+            "age": "26",
+            "nationality": "Japanese",
             "image": "./images/momo.png"
         },
         {
             "id": 12,
             "name": "Momo",
+            "age": "26",
+            "nationality": "Japanese",
             "image": "./images/momo.png"
         },
         {
             "id": 13,
             "name": "Nayeon",
+            "age": "27",
+            "nationality": "Korean",
             "image": "./images/Nayeon.png"
         },
         {
             "id": 14,
             "name": "Nayeon",
+            "age": "27",
+            "nationality": "Korean",
             "image": "./images/Nayeon.png"
         },
         {
             "id": 15,
             "name": "Sana",
+            "age": "26",
+            "nationality": "Japanese",
             "image": "./images/Sana.png"
         },
         {
             "id": 16,
             "name": "Sana",
+            "age": "26",
+            "nationality": "Japanese",
             "image": "./images/Sana.png"
         },
         {
             "id": 17,
             "name": "Tzuyu",
+            "age": "24",
+            "nationality": "Taiwanese",
             "image": "./images/Tzuyu.png"
         },
         {
             "id": 18,
             "name": "Tzuyu",
+            "age": "24",
+            "nationality": "Taiwanese",
             "image": "./images/Tzuyu.png"
         },
         {
             "id": 19,
             "name": "Group",
+            "company": "JYP Entertainment",
             "image": "./images/group.png"
         },
         {
             "id": 20,
             "name": "Group",
+            "company": "JYP Entertainment",
             "image": "./images/group.png"
         }
 ]}
