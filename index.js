@@ -1,9 +1,6 @@
 /*  UNFINISHED REVISION OF PROJECT!!! */
 
-//Instead of hardcoding each card, I've created a json file with each member and its 3 attributes.
-//After meeting with Matt, he helped me refresh my memory on how fetch works
 
-// const section = document.querySelector("section");
 // //grab json data using fetch
 
 // fetch ("http://localhost:3000/members")
@@ -28,22 +25,21 @@ fetch("http://localhost:3000/members")
         console.log('UNSUCCESSFUL', error);
     });
 
-//     //fat arrow functions ("callback function")
-//     //fetching data from server, converting it into usable data
-
-
-//     // have each card appear
+//******* have each card appear (???)**********
   function renderCards(members){
 console.log(members);
   }
-    // create 20 divs, two each for matching pair
-    //create grid
+
+
+// create 20 divs, two each for matching pair(???)
+//create grid(???)
+
 //   members.forEach((member) => {
 //     // console.log(member);
 //   })
-        const card = document.createElement("div");
-        const front = document.createElement("img");
-        const back = document.createElement("div");
+        // const card = document.createElement("div");
+        // const front = document.createElement("img");
+        // const back = document.createElement("div");
 
 
 //   })
@@ -62,17 +58,18 @@ console.log(members);
 
 // })
 // }
-///practice code
+///practice code -- (not sure if i'm going the right direction somewhere here)
 
 // const cards = document.getElementById("")
 // console.log(cards)
 // const cards = document.querySelector('card-container')
 // const cards = document.getElementById('members')
+
 const cards = document.querySelectorAll('.memory-card');
 
 
 
-///
+
 let flippedCard = false;
 let lockBoard= false;
 let firstCard, secondCard;
@@ -141,7 +138,9 @@ function shuffle(){
 }
 shuffle();
 
-//Event listeners
-// cards.forEach(card => card.addEventListener("click", flipCard));
-//[ ] NEED ONE MORE EVENT LISTENER
+
+//FINISH ADDING Event listeners ***
+// cards.forEach(card => card.addEventListener("click", flipCard)); (???)
+
+//[ ] NEED ONE MORE EVENT LISTENER (Not another click event)
 //[ ] EXTRA EVENT LISTENER
