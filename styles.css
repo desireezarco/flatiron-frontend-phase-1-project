@@ -5,6 +5,7 @@
 }
 
 body {
+    text-align: center;
     min-height: 100vw;
     min-width: 100vw;
     background-color: black;
@@ -63,15 +64,15 @@ img {
 
 
 
-.memory-game {
+#game-container {
     width: 640px;
-    height: 640px;
+    height: 720px;
+    background-color: white;
     justify-content: center;
     margin: auto;
     display: flex;
-    grid-template-columns: repeat(5, 4);
     flex-wrap: wrap;
-    perspective: 500px;
+    border: 10px solid lightpink;
 }
 
 

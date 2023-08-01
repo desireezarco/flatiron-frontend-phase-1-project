@@ -1,6 +1,27 @@
 /*  UNFINISHED REVISION OF PROJECT!!! */
 
 
+// const API = "http://localhost:3000/members"
+
+// fetch(API)
+//     .then((res) => res.json())
+//     .then(renderMembers);
+
+// function renderMembers(members){
+//     members.forEach(renderMembers);
+// }
+
+// function renderMembers(member){
+//     const memberDiv = ('member-card')
+//     const memberImage = document.createElement("img");
+//     memberImage.src = member.image;
+//     memberDiv.append(memberImage)
+// }
+
+
+
+
+
 // //grab json data using fetch
 
 // fetch ("http://localhost:3000/members")
@@ -13,39 +34,63 @@
 
 
 //async json fetch
-fetch("http://localhost:3000/members")
+// method: 'POST',
+// headers: {
+    //     'Content-Type': 'application/json'
+    // },
+    // body: JSON.stringify({'id':1})
+    // })
+    
+    
+const members = fetch("http://localhost:3000/members")
     .then((response) => {
         console.log('SUCCESS', response);
         return response.json();
     })
     .then(data => {
         console.log(data);
-    })
+        renderCards(data)
+    }) 
     .catch((error) => {
         console.log('UNSUCCESSFUL', error);
     });
+console.log(members)
+  
+
+
+
+// const response = await fetch("http://localhost:3000/members");
+// const json = await response.json();
+// console.log(JSON.stringify(json))
+
+
 
 //******* have each card appear (???)**********
-  function renderCards(members){
-console.log(members);
-  }
+function renderCards(members){
+    const cards = members.map((member) => {
+        // const card = document.createElement("div");
+        // const front = document.createElement("img");
+        // const back = document.createElement("div");
+        const front = document.createElement("h2")
+        front.textContent = member.name
+        return front
+    })
+    console.log(cards)
+}
+
+// return cards and render
+
+
+
 
 
 // create 20 divs, two each for matching pair(???)
 //create grid(???)
 
-//   members.forEach((member) => {
-//     // console.log(member);
-//   })
-        // const card = document.createElement("div");
-        // const front = document.createElement("img");
-        // const back = document.createElement("div");
 
 
 //   })
 //         card.classList = "card";
-//         // const front = document.createElement("h2")
-//         // h2.textContent = members.name
 //         front.classList = document.createElement("img");
 //         // img.classList.add("member-image");
 //         // img.src = member.image;
