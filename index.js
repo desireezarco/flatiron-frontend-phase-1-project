@@ -11,9 +11,13 @@ function renderMembers(members) {
     
     const section = document.querySelector('section');
     members.forEach((member) => {
-        const h2 = document.createElement('h2');
-        h2.innerHTML = member.name;
-        section.appendChild(h2);
+        // const h2 = document.createElement('h2');
+        // h2.innerHTML = member.name;
+        // section.appendChild(h2);
+
+        const memberImage = document.createElement('img');
+        memberImage.src = member.image;
+        section.append(memberImage);
     })
 }
 
