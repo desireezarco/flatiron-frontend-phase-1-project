@@ -387,7 +387,7 @@ p {
 .game-actions{
     display: flex;
     justify-content: center;
-} */
+}
 
 
 .game-actions button {
@@ -398,31 +398,34 @@ p {
     color: white
 }
 
-.game-container {
+/* .game-container {
     display: grid;
     justify-content: center;
     grid-gap: 16px;
     grid-template-columns: repeat(5, 140px);
     grid-template-rows: repeat(2, calc(140px / 2 * 3));
-}
-
-
-/* my preferred container */
-/* .game-container {
-    width: 640px;
-    height: 720px;
-    background-color: beige;
-    justify-content: center;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    border: 10px solid lightpink;
 } */
 
 
+/* my preferred container */
+.game-container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(5, 125px);
+    grid-template-rows: 4;
+    justify-content: center;
+
+    width: 700px;
+    height: 720px;
+    background-color: beige;
+    margin: auto;
+    border: 10px solid lightpink;
+}
+
+
 .card {
-    height: calc(140px / 2 * 3);
-    width: 140px;
+    height: 175px;
+    width: 125px;
     border-radius: 10px;
     background-color: white;
     position: relative;
@@ -441,7 +444,7 @@ p {
 
 .front-face,
 .back-face {
-    backface-visibility: hidden;
+    /* backface-visibility: hidden; */
     position: absolute;
     border-radius: 10px;
     top: 0;
@@ -458,7 +461,7 @@ p {
 }
 
 .card .back-face {
-    background-image: url(/images/twice-logo.png);
+    /* background-image: url(/images/twice-logo.png); */
     background-position: center center;
     background-size: cover;
     backface-visibility: hidden;

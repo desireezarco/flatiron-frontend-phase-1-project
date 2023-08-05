@@ -3,7 +3,7 @@
 const gameContainer = document.querySelector(".game-container");
 // const memoryCard = document.querySelector(".memory-card");
 
-let members = [];
+let cards = [];
 let firstCard, secondCard;
 let lockBoard = false;
 let score = 0;
@@ -39,7 +39,7 @@ function shuffleCards() {
 
 function generateCards() {
     for (let card of cards) {
-        const cardElement = document.createElement('div')
+        const cardElement = document.createElement('img')
         cardElement.classList.add('card')
         cardElement.setAttribute('name', card.name)
         cardElement.setAttribute('src', card.image)
@@ -47,7 +47,7 @@ function generateCards() {
         <div class="front">
             <img class="front-face" src=${card.image} />
             </div>
-        <div class="back-face"></div>
+        <div class="back-face" src=${"/images/twice-logo.png"}></div>
             `
         gameContainer.appendChild(cardElement)
         // gameContainer.appendChild(cardElement)
@@ -75,13 +75,13 @@ function flipCard() {
 }
 
 function checkIfMatch(){
-    let isMatch = firstCard.dataset.name === secondCard.dataset.name;
+    let isMatch = firstCard.dataset.cards === secondCard.dataset.cards;
 
     isMatch ? disableCards() : unflipCards();
 }
 
 function disableCards(){
-    firstCard.removeEventListener("clicl", flipCard);
+    firstCard.removeEventListener("click", flipCard);
     secondCard.removeEventListener("click", flipCard);
 
     resetBoard();
