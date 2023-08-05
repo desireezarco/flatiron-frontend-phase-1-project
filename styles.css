@@ -402,23 +402,23 @@ p {
     display: grid;
     justify-content: center;
     grid-gap: 16px;
-    grid-template-columns: repeat(6, 140px);
+    grid-template-columns: repeat(5, 140px);
     grid-template-rows: repeat(2, calc(140px / 2 * 3));
 }
 
-/* ----------------------- */
+
 /* my preferred container */
 /* .game-container {
     width: 640px;
     height: 720px;
-    background-color: white;
+    background-color: beige;
     justify-content: center;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
     border: 10px solid lightpink;
 } */
-/* ----------------------- */
+
 
 .card {
     height: calc(140px / 2 * 3);
