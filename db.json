@@ -5,137 +5,157 @@
             "name": "Chaeyoung",
             "age": "24",
             "nationality": "Korean",
-            "image": "./images/Chaeyoung.png"
+            "image": "./images/Chaeyoung.png",
+            "logo": "./images/twice-logo.png"
         },
         {
             "id": 2,
             "name": "Chaeyoung",
             "age": "24",
             "nationality": "Korean",
-            "image": "./images/Chaeyoung.png"
+            "image": "./images/Chaeyoung.png",
+            "logo": "./images/twice-logo.png"
         },
         {
             "id": 3,
             "name": "Dahyun",
             "age": "25",
             "nationality": "Korean",
-            "image": "./images/Dahyun.png"
+            "image": "./images/Dahyun.png",
+            "logo": "./images/twice-logo.png"
         },
         {
             "id": 4,
             "name": "Dahyun",
             "age": "25",
             "nationality": "Korean",
-            "image": "./images/Dahyun.png"
+            "image": "./images/Dahyun.png",
+            "logo": "./images/twice-logo.png"
         },
         {
             "id": 5,
             "name": "Jeongyeon",
             "age": "26",
             "nationality": "Korean",
-            "image": "./images/Jeongyeon.png"
+            "image": "./images/Jeongyeon.png",
+            "logo": "./images/twice-logo.png"
         },
         {
             "id": 6,
             "name": "Jeongyeon",
             "age": "26",
             "nationality": "Korean",
-            "image": "./images/Jeongyeon.png"
+            "image": "./images/Jeongyeon.png",
+            "logo": "./images/twice-logo.png"
         },
         {
             "id": 7,
             "name": "Jihyo",
             "age": "26",
             "nationality": "Korean",
-            "image": "./images/Jihyo.png"
+            "image": "./images/Jihyo.png",
+            "logo": "./images/twice-logo.png"
         },
         {
             "id": 8,
             "name": "Jihyo",
             "age": "26",
             "nationality": "Korean",
-            "image": "./images/Jihyo.png"
+            "image": "./images/Jihyo.png",
+            "logo": "./images/twice-logo.png"
         },
         {
             "id": 9,
             "name": "Mina",
             "age": "26",
             "nationality": "Japanese",
-            "image": "./images/mina.png"
+            "image": "./images/mina.png",
+            "logo": "./images/twice-logo.png"
         },
         {
             "id": 10,
             "name": "Mina",
             "age": "26",
             "nationality": "Japanese",
-            "image": "./images/mina.png"
+            "image": "./images/mina.png",
+            "logo": "./images/twice-logo.png"
         },
         {
             "id": 11,
             "name": "Momo",
             "age": "26",
             "nationality": "Japanese",
-            "image": "./images/momo.png"
+            "image": "./images/momo.png",
+            "logo": "./images/twice-logo.png"
         },
         {
             "id": 12,
             "name": "Momo",
             "age": "26",
             "nationality": "Japanese",
-            "image": "./images/momo.png"
+            "image": "./images/momo.png",
+            "logo": "./images/twice-logo.png"
         },
         {
             "id": 13,
             "name": "Nayeon",
             "age": "27",
             "nationality": "Korean",
-            "image": "./images/Nayeon.png"
+            "image": "./images/Nayeon.png",
+            "logo": "./images/twice-logo.png"
         },
         {
             "id": 14,
             "name": "Nayeon",
             "age": "27",
             "nationality": "Korean",
-            "image": "./images/Nayeon.png"
+            "image": "./images/Nayeon.png",
+            "logo": "./images/twice-logo.png"
         },
         {
             "id": 15,
             "name": "Sana",
             "age": "26",
             "nationality": "Japanese",
-            "image": "./images/Sana.png"
+            "image": "./images/Sana.png",
+            "logo": "./images/twice-logo.png"
         },
         {
             "id": 16,
             "name": "Sana",
             "age": "26",
             "nationality": "Japanese",
-            "image": "./images/Sana.png"
+            "image": "./images/Sana.png",
+            "logo": "./images/twice-logo.png"
         },
         {
             "id": 17,
             "name": "Tzuyu",
             "age": "24",
             "nationality": "Taiwanese",
-            "image": "./images/Tzuyu.png"
+            "image": "./images/Tzuyu.png",
+            "logo": "./images/twice-logo.png"
         },
         {
             "id": 18,
             "name": "Tzuyu",
             "age": "24",
             "nationality": "Taiwanese",
-            "image": "./images/Tzuyu.png"
+            "image": "./images/Tzuyu.png",
+            "logo": "./images/twice-logo.png"
         },
         {
             "id": 19,
             "name": "Group",
             "company": "JYP Entertainment",
-            "image": "./images/group.png"
+            "image": "./images/group.png",
+            "logo": "./images/twice-logo.png"
         },
         {
             "id": 20,
             "name": "Group",
             "company": "JYP Entertainment",
-            "image": "./images/group.png"
+            "image": "./images/group.png",
+            "logo": "./images/twice-logo.png"
         }
 ]}

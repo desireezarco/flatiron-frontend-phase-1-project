@@ -1,11 +1,10 @@
 /*  UNFINISHED REVISION OF PROJECT!!! */
 
 const gameContainer = document.querySelector(".game-container");
-// const memoryCard = document.querySelector(".memory-card");
 
-let cards = [];
-let firstCard, secondCard;
-let lockBoard = false;
+// let cards = [];
+let cardOne, cardTwo;
+let compare = false;
 let score = 0;
 
 document.querySelector(".score").textContent = score;
@@ -17,11 +16,10 @@ fetch("http://localhost:3000/members")
     .then((res) => res.json())
     .then((data) => {
         cards = [...data]
-        console.log(cards)
-        shuffleCards()
-        generateCards()
+        // console.log(data)
+        shuffleCards();
+        generateCards();
     })
-
 
 function shuffleCards() {
     let currentIndex = cards.length, 
@@ -37,167 +35,85 @@ function shuffleCards() {
     }
 }
 
+
 function generateCards() {
     for (let card of cards) {
         const cardElement = document.createElement('img')
         cardElement.classList.add('card')
-        cardElement.setAttribute('name', card.name)
-        cardElement.setAttribute('src', card.image)
+        cardElement.setAttribute('members-name', card.name)
+        cardElement.setAttribute("src", card.image)
         cardElement.innerHTML = `
-        <div class="front">
-            <img class="front-face" src=${card.image} />
-            </div>
-        <div class="back-face" src=${"/images/twice-logo.png"}></div>
-            `
-        gameContainer.appendChild(cardElement)
+        <div class="front-back">
+            <img class="front-face" src=${card.image}>
+            </img>
+        <div class="back-face" src="/images/twice-logo.png"></div>
+        </div>
+    `;
+        gameContainer.appendChild(cardElement);
         // gameContainer.appendChild(cardElement)
         cardElement.addEventListener("click", flipCard)
+        console.log(cardElement)
 }
 }
+
+
+// const card = document.querySelectorAll(".game-container");
+
 
 function flipCard() {
-    if (lockBoard) return;
-    if (this === firstCard) return;
+    if (compare) return;
+    if (this === cardOne) return;
 
-    this.classList.add("flipped")
+    this.classList.add("flipped");
 
-    if(!firstCard){
-        firstCard = this;
+    if(!cardOne){
+        cardOne = this;
         return;
     }
 
-    secondCard = this;
+    cardTwo = this;
     score++;
     document.querySelector(".score").textContent = score;
-    lockBoard = true;
+    compare = true;
 
     checkIfMatch();
 }
 
 function checkIfMatch(){
-    let isMatch = firstCard.dataset.cards === secondCard.dataset.cards;
+    let isMatch = cardOne.dataset.membersName === cardTwo.dataset.membersName;
 
     isMatch ? disableCards() : unflipCards();
 }
 
 function disableCards(){
-    firstCard.removeEventListener("click", flipCard);
-    secondCard.removeEventListener("click", flipCard);
+    cardOne.removeEventListener("click", flipCard);
+    cardTwo.removeEventListener("click", flipCard);
 
     resetBoard();
 }
 
 function unflipCards(){
     setTimeout(() => {
-        firstCard.classList.remove("flipped")
-        secondCard.classList.remove("flipped");
+        cardOne.classList.remove("flipped")
+        cardTwo.classList.remove("flipped");
         resetBoard();
     }, 1000);
 }
 
 function resetBoard(){
-    firstCard = null;
-    secondCard = null;
-    lockBoard = false;
+    cardOne = null;
+    cardTwo = null;
+    compare = false;
 }
 
 function restart(){
     resetBoard();
-    shuffleCards
+    shuffleCards();
+    score = 0;
+    document.querySelector(".score").textContent = score;
+    gameContainer.innerHTML = "";
+    generateCards()
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-// function flipCard(){
-//     if (lockBoard) return;
-//     if (this === firstCard) return;
-
-//     this.classList.add("flipped");
-
-//     if (!firstCard){
-//         firstCard = this;
-//         return;
-//     }
-
-// secondCard = this;
-// score++;
-// document.querySelector(".score").textContent = score;
-// lockBoard = true;
-
-// checkIfMatch()
-
-// }
-
-// function checkIfMatch(){
-//     let isMatch = firstCard.dataset.name === secondCard.dataset.name;
-
-//     isMatch ? disableCards() : unflipCards();
-// }
-
-// function disableCards() {
-//     firstCard.removeEventListener("click", flipCard)
-//     secondCard.removeEventListener("click", flipCard)
-
-//     resetBoard()
-// }
-
-// function unflipCards(){
-//     setTimeout(() => {
-//         firstCard.classList.remove("flipped")
-//         secondCard.classList.remove("flipped")
-//         resetBoard()
-//     }, 1000)
-// }
-
-// function resetBoard(){
-//     firstCard = null
-//     secondCard = null
-//     lockBoard = false
-// }
-
-// function restart(){
-//     resetBoard()
-//     shuffleCards()
-//     score = 0;
-//     document.querySelector(".score").textContent = score
-//     gameContainer.innerHTML = "",
-//     generateCards()
-// }
-
-
-
-
-
 
 
 
@@ -237,4 +153,11 @@ function restart(){
 // document.addEventListener("DOMContentLoaded", function () {
 //     fetchMembers();
 // })
+
+
+
+
+
+
+
 
