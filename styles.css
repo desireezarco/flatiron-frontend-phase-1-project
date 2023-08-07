@@ -38,11 +38,12 @@ p {
     grid-template-columns: repeat(5, 125px);
     grid-template-rows: 4;
     justify-content: center;
+
     width: 700px;
     height: 720px;
-    border: 10px solid lightpink;
     background-color: beige;
     margin: auto;
+    border: 10px solid lightpink;
 }
 
 
@@ -53,8 +54,12 @@ p {
     background-color: white;
     position: relative;
     transform-style: preserve-3d;
-    transition: transform .5s;
+    transition: all 0.5s ease-in-out;
+}
 
+.front-face {
+    width: 60px;
+    height: 60px;
 }
 
 .card.flipped {
@@ -65,20 +70,32 @@ p {
 .back-face {
     backface-visibility: hidden;
     position: absolute;
+    border-radius: 10px;
     top: 0;
     left: 0;
-    width: 100%;
-    border-radius: 10px;
     height: 100%;
+    width: 100%;
 }
 
 .card .front-face {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transform: rotateY(180deg);
 }
 
 .card .back-face {
-    background-image: url("./images/twice-logo.png");
+    background-image: url(/images/twice-logo.png);
     background-position: center center;
     background-size: cover;
     backface-visibility: hidden;
 }
+
+
+
+
+
+
+
+
+
