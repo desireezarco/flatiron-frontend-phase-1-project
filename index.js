@@ -1,7 +1,6 @@
 /*  UNFINISHED REVISION OF PROJECT!!! */
 
-const gameContainer = document.querySelector(".game-container");
-// const memoryCard = document.querySelector(".memory-card");
+const gridContainer = document.querySelector(".grid-container");
 
 let cards = [];
 let firstCard, secondCard;
@@ -16,10 +15,10 @@ document.querySelector(".score").textContent = score;
 fetch("http://localhost:3000/members")
     .then((res) => res.json())
     .then((data) => {
-        cards = [...data]
-        console.log(cards)
-        shuffleCards()
-        generateCards()
+        cards = [...data];
+        console.log(cards);
+        shuffleCards();
+        generateCards();
     })
 
 
@@ -39,57 +38,64 @@ function shuffleCards() {
 
 function generateCards() {
     for (let card of cards) {
-        const cardElement = document.createElement('img')
-        cardElement.classList.add('card')
-        cardElement.setAttribute('name', card.name)
-        cardElement.setAttribute('src', card.image)
+        const cardElement = document.createElement("div");
+        cardElement.classList.add("card");
+        cardElement.setAttribute("data-name", card.name);
+        cardElement.setAttribute('src', card.image);
         cardElement.innerHTML = `
         <div class="front">
-            <img class="front-face" src=${card.image} />
-            </div>
-        <div class="back-face" src=${"/images/twice-logo.png"}></div>
-            `
-        gameContainer.appendChild(cardElement)
-        // gameContainer.appendChild(cardElement)
-        cardElement.addEventListener("click", flipCard)
-}
+            <img class="front-image" src=${card.image} /></div>
+        <div class="back" src=${"/images/twice-logo.png"}></div>
+            `;
+        gridContainer.appendChild(cardElement);
+        cardElement.addEventListener("click", flipCard);
+    }
 }
 
 function flipCard() {
     if (lockBoard) return;
     if (this === firstCard) return;
 
-    this.classList.add("flipped")
+    this.classList.add("flipped");
 
-    if(!firstCard){
+    if (!firstCard) {
         firstCard = this;
         return;
     }
 
     secondCard = this;
-    score++;
-    document.querySelector(".score").textContent = score;
     lockBoard = true;
-
     checkIfMatch();
+    
+    //score++;
+    //document.querySelector(".score").textContent = score;
+    
+
+
 }
 
 function checkIfMatch(){
-    let isMatch = firstCard.dataset.cards === secondCard.dataset.cards;
+    let isMatch = firstCard.dataset.name === secondCard.dataset.name;
 
-    isMatch ? disableCards() : unflipCards();
+    //isMatch ? disableCards() : unflipCards();
+    if (isMatch) {
+        disableCards();
+        score++;
+        document.querySelector(".score").textContent = score;
+    } else {
+        unflipCards();
+    }
 }
 
 function disableCards(){
     firstCard.removeEventListener("click", flipCard);
     secondCard.removeEventListener("click", flipCard);
-
     resetBoard();
 }
 
 function unflipCards(){
     setTimeout(() => {
-        firstCard.classList.remove("flipped")
+        firstCard.classList.remove("flipped");
         secondCard.classList.remove("flipped");
         resetBoard();
     }, 1000);
@@ -103,69 +109,16 @@ function resetBoard(){
 
 function restart(){
     resetBoard();
-    shuffleCards
-}
-
-
-function flipCard(){
-    if (lockBoard) return;
-    if (this === firstCard) return;
-
-    this.classList.add("flipped");
-
-    if (!firstCard){
-        firstCard = this;
-        return;
-    }
-
-secondCard = this;
-score++;
-document.querySelector(".score").textContent = score;
-lockBoard = true;
-
-checkIfMatch()
-
-}
-
-function checkIfMatch(){
-    let isMatch = firstCard.dataset.name === secondCard.dataset.name;
-
-    isMatch ? disableCards() : unflipCards();
-}
-
-function disableCards() {
-    firstCard.removeEventListener("click", flipCard)
-    secondCard.removeEventListener("click", flipCard)
-
-    resetBoard()
-}
-
-function unflipCards(){
-    setTimeout(() => {
-        firstCard.classList.remove("flipped")
-        secondCard.classList.remove("flipped")
-        resetBoard()
-    }, 1000)
-}
-
-function resetBoard(){
-    firstCard = null
-    secondCard = null
-    lockBoard = false
-}
-
-function restart(){
-    resetBoard()
-    shuffleCards()
+    shuffleCards();
     score = 0;
-    document.querySelector(".score").textContent = score
-    gameContainer.innerHTML = "",
-    generateCards()
+    document.querySelector(".score").textContent = score;
+    gridContainer.innerHTML = "";
+    generateCards();
 }
 
 
-// ******* have each card appear **********
-function renderMembers(members) {
+ // ******* have each card appear **********
+/* function renderMembers(members) {
 
     const div = document.querySelector('div');
     members.forEach((member) => {
@@ -187,8 +140,8 @@ function renderMembers(members) {
         // card.addEventListener('click', flipCard)
         // gameContainer.appendChild(card)
     })
-}
+} 
 
-document.addEventListener("DOMContentLoaded", function () {
+ document.addEventListener("DOMContentLoaded", function () {
     fetchMembers();
-})
+})  */
