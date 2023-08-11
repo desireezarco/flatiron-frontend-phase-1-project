@@ -6,6 +6,7 @@ body {
 }
 
 h1 {
+    padding: 30px;
     text-align: center;
     font-weight: 700;
     font-size: 50px;
@@ -60,6 +61,7 @@ p {
 .front-image {
     width: 125px;
     height: 175px;
+    border-radius: 10px;
 }
 
 .card.flipped {
