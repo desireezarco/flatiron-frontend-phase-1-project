@@ -11,33 +11,35 @@ document.querySelector(".score").textContent = score;
 
 // url = "http://localhost:3000/members"
 
-//Fetch data
+//FETCH JSON DATA
 fetch("http://localhost:3000/members")
     .then((res) => res.json())
     .then((data) => {
         cards = [...data];
-        console.log(cards);
+        // console.log(cards);
         shuffleCards();
         generateCards();
     })
-
-
+//SHUFFLE CARDS
 function shuffleCards() {
-    let currentIndex = cards.length, 
-    randomIndex,
+    let index = cards.length, 
+    random,
     temporaryValue;
 
-    while (currentIndex !==0) {
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
-        temporaryValue = cards[currentIndex];
-        cards[currentIndex] = cards[randomIndex];
-        cards[randomIndex] = temporaryValue;
+    while (index !==0) {
+        random = Math.floor(Math.random() * index);
+        index -= 1;
+        temporaryValue = cards[index];
+        cards[index] = cards[random];
+        cards[random] = temporaryValue;
     }
 }
 
+//Generate Cards and addEventListener #1. CLICK EVENT
 function generateCards() {
     for (let card of cards) {
+        // console.log(card)
+
         const cardElement = document.createElement("div");
         cardElement.classList.add("card");
         cardElement.setAttribute("data-name", card.name);
@@ -48,10 +50,21 @@ function generateCards() {
         <div class="back" src=${"/images/twice-logo.png"}></div>
             `;
         gridContainer.appendChild(cardElement);
-        cardElement.addEventListener("click", flipCard);
-    }
+        cardElement.addEventListener("click", flipCard)
+        
+}
 }
 
+//EVENT LISTENER 2. MOUSEOVER EVENT
+
+const button = document.getElementById("groupPic")
+    button.addEventListener("mouseover", alertBox);
+
+function alertBox(){
+    alert(`Thank you for playing!`)
+}
+
+//MAKE CARDS FLIP
 function flipCard() {
     if (lockBoard) return;
     if (this === firstCard) return;
@@ -69,15 +82,15 @@ function flipCard() {
     
     //score++;
     //document.querySelector(".score").textContent = score;
-    
-
-
 }
 
+//CHECK IF CARD ONE AND TWO MATCH AND STAY FLIPPED.
+//IF DOES NOT MATCH, UNFLIP CARDS.
 function checkIfMatch(){
     let isMatch = firstCard.dataset.name === secondCard.dataset.name;
 
-    //isMatch ? disableCards() : unflipCards();
+//isMatch ? disableCards() : unflipCards();
+//SCORE COUNTER
     if (isMatch) {
         disableCards();
         score++;
@@ -87,6 +100,7 @@ function checkIfMatch(){
     }
 }
 
+//IF MATCHING, REMOVE CLICK EVENT AND KEEP CARD FLIPPED.
 function disableCards(){
     firstCard.removeEventListener("click", flipCard);
     secondCard.removeEventListener("click", flipCard);
@@ -101,6 +115,7 @@ function unflipCards(){
     }, 1000);
 }
 
+//RESET GAME
 function resetBoard(){
     firstCard = null;
     secondCard = null;

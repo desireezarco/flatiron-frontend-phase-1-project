@@ -6,17 +6,18 @@ body {
 }
 
 h1 {
-    padding: 30px;
+    padding-top: 30px;
     text-align: center;
     font-weight: 700;
-    font-size: 50px;
+    font-size: 90px;
     color: lightcoral;
 }
 
 p {
     text-align: center;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bold;
+    margin: 25px;
 }
 
 .actions {
@@ -29,7 +30,7 @@ p {
     padding: 8px 16px;
     font-size: 20px;
     border-radius: 10px;
-    background-color: #27ae60;
+    background-color: rgb(234, 169, 48);
     color: white
 }
 
@@ -39,7 +40,7 @@ p {
     grid-template-columns: repeat(5, 125px);
     grid-template-rows: 4;
     justify-content: center;
-
+    padding: 20px;
     width: 700px;
     height: 720px;
     background-color: beige;
@@ -91,3 +92,46 @@ p {
     background-position: center;
     background-size: cover;
 }
+
+
+/* bottom half of page (group pic, pic shake, alert button) */
+#photo2 {
+    text-align: center;
+    padding: 100px;
+}
+
+#photo2 img:hover{
+    animation: shake 0.5s;
+    animation-iteration-count: 1;
+}
+
+img {
+    display: block;
+    margin: 0px auto;
+}
+
+@keyframes shake {
+    10%, 90% { transform: translate3d(-1px, 0, 0);}
+    20%, 80% {transform: translate3d(2px, 0, 0);}
+    30%, 50%, 70% {transform: translate3d(-4px, 0, 0);}
+    40%, 60% {transform: translate3d(4px, 0, 0);}
+}
+
+button {
+    display: block;
+    margin: 0px auto;
+}
+
+#groupPic {
+    width: 205px;
+    height: 50px;
+    background-color: lightcoral;
+    color :white;
+    font-family: "Bodoni Poster", serif;
+    font-weight: 700;
+    font-size: large;
+    padding: 8px, 16px;
+    margin-top: 20px;
+    display: block;
+}
+
