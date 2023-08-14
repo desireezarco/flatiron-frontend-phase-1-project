@@ -17,15 +17,37 @@ fetch("http://localhost:3000/members")
     .then((data) => {
         cards = [...data];
         // console.log(cards);
-        shuffleCards(cards);
+        shuffleCards();
         generateCards();
     })
 
 //SHUFFLE CARDS
-function shuffleCards(cards) {
-    cards.sort(() => Math.random() - 0.5);
-};
+function shuffleCards() {
+//     let index = 20,
+//     random,
+//     temporaryValue;
+//     cards.forEach(cards => {
+//         random = Math.floor(Math.random() * index);
+//         index -= 1;
+//         console.log('loop index ',index, random);
 
+//         temporaryValue = cards[index];
+//         cards[index] = cards[random];
+//         cards[random] = temporaryValue;
+// });
+
+    let index = cards.length, 
+    random,
+    temporaryValue;
+
+    while (index !==0) {
+        random = Math.floor(Math.random() * index);
+        index -= 1;
+        temporaryValue = cards[index];
+        cards[index] = cards[random];
+        cards[random] = temporaryValue;
+    }
+}
 
 //Generate Cards and addEventListener #1. CLICK EVENT
 function generateCards() {
