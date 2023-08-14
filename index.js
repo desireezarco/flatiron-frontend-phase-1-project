@@ -1,6 +1,6 @@
 /*  UNFINISHED REVISION OF PROJECT!!! */
 
-const gridContainer = document.querySelector(".grid-container");
+const gameContainer = document.querySelector(".game-container");
 
 let cards = [];
 let firstCard, secondCard;
@@ -17,23 +17,15 @@ fetch("http://localhost:3000/members")
     .then((data) => {
         cards = [...data];
         // console.log(cards);
-        shuffleCards();
+        shuffleCards(cards);
         generateCards();
     })
-//SHUFFLE CARDS
-function shuffleCards() {
-    let index = cards.length, 
-    random,
-    temporaryValue;
 
-    while (index !==0) {
-        random = Math.floor(Math.random() * index);
-        index -= 1;
-        temporaryValue = cards[index];
-        cards[index] = cards[random];
-        cards[random] = temporaryValue;
-    }
-}
+//SHUFFLE CARDS
+function shuffleCards(cards) {
+    cards.sort(() => Math.random() - 0.5);
+};
+
 
 //Generate Cards and addEventListener #1. CLICK EVENT
 function generateCards() {
@@ -49,14 +41,11 @@ function generateCards() {
             <img class="front-image" src=${card.image} /></div>
         <div class="back" src=${"/images/twice-logo.png"}></div>
             `;
-        gridContainer.appendChild(cardElement);
+        gameContainer.appendChild(cardElement);
         cardElement.addEventListener("click", flipCard)
-        
-}
-}
+}}
 
 //EVENT LISTENER 2. MOUSEOVER EVENT
-
 const button = document.getElementById("groupPic")
     button.addEventListener("mouseover", alertBox);
 
@@ -76,12 +65,12 @@ function flipCard() {
         return;
     }
 
-    secondCard = this;
-    lockBoard = true;
-    checkIfMatch();
+secondCard = this;
+lockBoard = true;
+checkIfMatch();
     
-    //score++;
-    //document.querySelector(".score").textContent = score;
+//score++;
+//document.querySelector(".score").textContent = score;
 }
 
 //CHECK IF CARD ONE AND TWO MATCH AND STAY FLIPPED.
@@ -127,7 +116,7 @@ function restart(){
     shuffleCards();
     score = 0;
     document.querySelector(".score").textContent = score;
-    gridContainer.innerHTML = "";
+    gameContainer.innerHTML = "";
     generateCards();
 }
 

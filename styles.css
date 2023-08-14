@@ -20,13 +20,13 @@ p {
     margin: 25px;
 }
 
-.actions {
+.restart {
     display: flex;
     justify-content: center;
 }
 
 
-.actions button {
+.restart button {
     padding: 8px 16px;
     font-size: 20px;
     border-radius: 10px;
@@ -34,7 +34,7 @@ p {
     color: white
 }
 
-.grid-container {
+.game-container {
     display: grid;
     grid-gap: 5px;
     grid-template-columns: repeat(5, 125px);
